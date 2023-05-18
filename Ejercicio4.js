@@ -8,4 +8,6 @@ function returnCodigo(){
     input = document.getElementById("input")
     url = input.value
     input.value = ""
+    let expresion = /(https:\/\/)?(meet.google.com\/)(...)-(....)-(...)(.+)?/i
+    parameters = url.match(expresion)
 }
