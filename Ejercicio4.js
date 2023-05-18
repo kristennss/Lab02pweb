@@ -10,4 +10,15 @@ function returnCodigo(){
     input.value = ""
     let expresion = /(https:\/\/)?(meet.google.com\/)(...)-(....)-(...)(.+)?/i
     parameters = url.match(expresion)
+    if(parameters != null) {
+        
+        codigo = `${parameters[3]}${parameters[4]}${parameters[5]}`
+        box.innerHTML = 
+        `<h1>El código es: ${codigo}</h1>
+        <div>
+        <button onclick='location.reload()'>Volver</button>
+        </div>`
+    }
+
+
 }
