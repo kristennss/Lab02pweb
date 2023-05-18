@@ -24,5 +24,10 @@ function generarTabla(){
 }
 
 function sumar(){
-
+    for (let i = 0; i< numerosTabla.length; i++) {
+        sumatoria = sumatoria + numerosTabla[i];
+      }
+      let modificar = document.getElementById("suma");
+      modificar.innerHTML = 'La sumatoria de la tabla es '+sumatoria  ;
+      document.getElementById("boton").innerHTML = "<button onclick='location.reload()'>Volver</button>";
 }
